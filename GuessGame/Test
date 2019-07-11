@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		System.out.println("1. 猜数字");
+		System.out.println("2. 猜字母");
+		System.out.print("选择：>");
+		int c  = new Scanner(System.in).nextInt();
+		//用父类型变量，既可以保存GNG,也可以保存GLG实例
+		GuessGame game = null;
+		if (c == 1) {
+			game = new GuessNmuberGame();
+		}else {
+			game = new GuessLetterGame();
+		}
+		game.start();
+	}
+
+}
